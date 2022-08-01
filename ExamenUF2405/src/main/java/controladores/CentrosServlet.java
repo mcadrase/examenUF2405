@@ -71,7 +71,7 @@ public class CentrosServlet extends HttpServlet {
 	private void mostrarListado(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		CentroDAO dao = new CentroDAOJDBC();
-		List<Centro> lista = dao.getCentros();
+		List<Centro> lista = dao.getCentro();
 		request.setAttribute("listaCentros", lista);
 		request.getRequestDispatcher("/centros/listado.jsp").forward(request, response);
 		

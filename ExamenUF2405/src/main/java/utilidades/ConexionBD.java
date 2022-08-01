@@ -13,7 +13,7 @@ public class ConexionBD {
 
 	private static final String database = "empresa";
 	private static final String usuario = "root";
-	private static final String contraseña = "123456";
+	private static final String contraseÃ±a = "123456";
 	private static final String url="jdbc:mysql://localhost/"+database;
 	
 	private Connection conexion=null;
@@ -28,7 +28,7 @@ public class ConexionBD {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			conexion = DriverManager.getConnection(url, usuario, contraseña);
+			conexion = DriverManager.getConnection(url, usuario, contraseÃ±a);
 			System.out.println("Conexion a bilioteca correcta");
 		} catch (ClassNotFoundException e) {
 			System.out.println("Driver no registrado");

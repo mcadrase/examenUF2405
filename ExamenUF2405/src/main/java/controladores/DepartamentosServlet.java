@@ -54,7 +54,7 @@ public class DepartamentosServlet extends HttpServlet {
 		Departamento dept = dao.getDepartamento(codDepartamento);
 		request.setAttribute("dept", dept);
 		CentroDAO daoCen= new CentroDAOJDBC();
-		List<Centro> lista = daoCen.getCentros();
+		List<Centro> lista = daoCen.getCentro();
 		request.setAttribute("listaCentros", lista);
 		request.getRequestDispatcher("/departamentos/editar.jsp").forward(request, response);
 	
@@ -71,7 +71,7 @@ public class DepartamentosServlet extends HttpServlet {
 	private void mostrarFormulario(HttpServletRequest request,
                                   HttpServletResponse response) throws ServletException, IOException {
 		CentroDAO daoCen= new CentroDAOJDBC();
-		List<Centro> lista = daoCen.getCentros();
+		List<Centro> lista = daoCen.getCentro();
 		request.setAttribute("listaCentros", lista);
 		request.getRequestDispatcher("/departamentos/insertar.jsp").forward(request, response);
 	}
